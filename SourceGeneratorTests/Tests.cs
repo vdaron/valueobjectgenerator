@@ -26,11 +26,11 @@ namespace SourceGeneratorTests
             string source = @"
 namespace Foo
 {
-    class C
+    class ValueObject{}
+
+    partial class C : ValueObject
     {
-        void M()
-        {
-        }
+        public int Test {get; init;}
     }
 }";
             string output = GetGeneratedOutput(source);
